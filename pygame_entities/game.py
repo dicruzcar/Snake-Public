@@ -184,7 +184,7 @@ class Game():
 
     def die_event(self):
         self.wall_collition()
-        self.canivalism()
+        self.i_have_bit_myself()
         
     def wall_collition(self):
         min_x = 0
@@ -200,7 +200,7 @@ class Game():
         elif self.snake.get_head_position()[1] == max_y and self.snake.direction == self.snake.get_south():
             self.alive = False
     
-    def canivalism(self):
+    def i_have_bit_myself(self):
         if self.snake.get_head_position() in self.snake.get_only_body():
             self.alive = False
     
