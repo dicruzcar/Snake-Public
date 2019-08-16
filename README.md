@@ -10,5 +10,6 @@ How to use:
 3. Activate the new venv:
    - Windows "venv_path/Scripts/activate.bat or venv_path/Scripts/activate"
    - Linux "source venv_path/Scripts/activate"
-4. Open the main.py file "python3 project_path/main.py"
-5. Enjoy!
+4. Install the dependencies "pip3 install -r requirements.txt"
+5. Open the main.py file "python3 main.py"
+6. Enjoy!
