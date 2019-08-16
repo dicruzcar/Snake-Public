@@ -5,10 +5,11 @@ Tested in python 3.7.3
 
 How to use:
 
-1. Create a new virtual enviroment in the project folder "python3 -m venv path"
-2. Open a new Terminal/CMD
+1. Open a new Terminal/CMD
+2. Create a new virtual enviroment in the project folder "python3 -m venv path"
 3. Activate the new venv:
    - Windows "venv_path/Scripts/activate.bat or venv_path/Scripts/activate"
    - Linux "source venv_path/Scripts/activate"
-4. Open the main.py file "python3 project_path/main.py"
-5. Enjoy!
+4. Install the dependencies "pip3 install -r requirements.txt"
+5. Open the main.py file "python3 main.py"
+6. Enjoy!
