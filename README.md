@@ -5,8 +5,8 @@ Tested in python 3.7.3
 
 How to use:
 
-1. Create a new virtual enviroment in the project folder "python3 -m venv path"
-2. Open a new Terminal/CMD
+1. Open a new Terminal/CMD
+2. Create a new virtual enviroment in the project folder "python3 -m venv path"
 3. Activate the new venv:
    - Windows "venv_path/Scripts/activate.bat or venv_path/Scripts/activate"
    - Linux "source venv_path/Scripts/activate"
