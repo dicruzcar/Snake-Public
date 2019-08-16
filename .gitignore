@@ -1,0 +1,4 @@
+.vscode/
+entities/__pycache__
+pygame_entities/__pycache__
+venv/
