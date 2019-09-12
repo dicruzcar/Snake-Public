@@ -16,7 +16,7 @@ class Game():
         self.width = width
         self.height = height
         self.background = (255,255,255)
-        self.basic_pixel_unit = 20
+        self.basic_pixel_unit = 10
         self.world_width = width / self.basic_pixel_unit
         self.world_height = height / self.basic_pixel_unit
         self.snake_body_unit_size = self.basic_pixel_unit
@@ -123,9 +123,9 @@ class Game():
                 tmp_x = self.translate_to_game_unit(index_x)
                 tmp_y = self.translate_to_game_unit(index_y)
                 if x == self.snake_value:
-                    pygame.draw.rect(self.screen, self.snake_body_color, pygame.Rect(tmp_x,tmp_y,20,20))
+                    pygame.draw.rect(self.screen, self.snake_body_color, pygame.Rect(tmp_x,tmp_y,self.basic_pixel_unit,self.basic_pixel_unit))
                 elif x == self.food_value:
-                    pygame.draw.rect(self.screen, self.food_color, pygame.Rect(tmp_x,tmp_y,20,20))
+                    pygame.draw.rect(self.screen, self.food_color, pygame.Rect(tmp_x,tmp_y,self.basic_pixel_unit,self.basic_pixel_unit))
 
     def update_world(self, array):
         self.world = array
