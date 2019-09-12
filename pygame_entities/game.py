@@ -28,8 +28,8 @@ class Game():
         #Game attributes
         self.restart_key = "SPACE"
         self.true_game_frames = 6
-        self.game_ticks = 30
-        self.true_frames_and_ticks_coeficent = int(self.game_ticks/self.true_game_frames)
+        self.reaction_frames = 30
+        self.true_frames_and_reaction_coeficent = int(self.reaction_frames/self.true_game_frames)
         self.win = False
         self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 40)
         self.h2_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 20)
@@ -64,12 +64,12 @@ class Game():
 
             key_buffer = self.keyboard_events(key_buffer)
 
-            if counter == self.true_frames_and_ticks_coeficent:
+            if counter == self.true_frames_and_reaction_coeficent:
                 key_buffer = self.keyboard_buffer(key_buffer)
                 self.load_world()
                 counter = 0
 
-            clock.tick(self.game_ticks)
+            clock.tick(self.reaction_frames)
             counter = counter + 1
 
         return 0
