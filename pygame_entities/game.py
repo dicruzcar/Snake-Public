@@ -28,7 +28,7 @@ class Game():
         #Game attributes
         self.restart_key = "SPACE"
         self.true_game_frames = 6
-        self.reaction_frames = 30
+        self.reaction_frames = 60
         self.true_frames_and_reaction_coeficent = int(self.reaction_frames/self.true_game_frames)
         self.win = False
         self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 40)
