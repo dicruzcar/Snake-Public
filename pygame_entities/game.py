@@ -16,7 +16,7 @@ class Game():
         self.width = width
         self.height = height
         self.background = (255,255,255)
-        self.basic_pixel_unit = 10
+        self.basic_pixel_unit = 20
         self.world_width = width / self.basic_pixel_unit
         self.world_height = height / self.basic_pixel_unit
         self.snake_body_unit_size = self.basic_pixel_unit
