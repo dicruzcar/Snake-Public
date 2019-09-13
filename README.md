@@ -9,7 +9,7 @@ How to use:
 2. Create a new virtual enviroment in the project folder "python3 -m venv path"
 3. Activate the new venv:
    - Windows "venv_path/Scripts/activate.bat or venv_path/Scripts/activate"
-   - Linux "source venv_path/Scripts/activate"
+   - Linux "source venv_path/bin/activate"
 4. Install the dependencies "pip3 install -r requirements.txt"
 5. Open the main.py file "python3 main.py"
 6. Enjoy!
