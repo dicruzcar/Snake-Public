@@ -15,15 +15,15 @@ class Game():
         #World attributes
         self.width = width
         self.height = height
-        self.background = (255,255,255)
+        self.background = (236, 240, 241)
         self.basic_pixel_unit = 20
         self.world_width = width / self.basic_pixel_unit
         self.world_height = height / self.basic_pixel_unit
         self.snake_body_unit_size = self.basic_pixel_unit
-        self.snake_body_color = (0,0,0)
+        self.snake_body_color = (52, 73, 94)
         self.snake_value = snake_value
         self.food_value = food_value
-        self.food_color = (203,203,203)
+        self.food_color = (22,160,133)
 
         #Game attributes
         self.restart_key = "SPACE"
