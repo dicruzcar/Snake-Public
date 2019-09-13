@@ -23,7 +23,7 @@ class Game():
         self.snake_body_color = (52, 73, 94)
         self.snake_value = snake_value
         self.food_value = food_value
-        self.food_color = (22,160,133)
+        self.food_color = (22, 160, 133)
 
         #Game attributes
         self.restart_key = "SPACE"
