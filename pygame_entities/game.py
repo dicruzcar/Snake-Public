@@ -29,7 +29,7 @@ class Game():
         #Game attributes
         self.restart_key = "SPACE"
         self.game_frames = 6
-        self.ui_frames = 144
+        self.ui_frames = 60
         self.frames_per_action_render = int(self.ui_frames/self.game_frames)
         self.win = False
         self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 40)
@@ -67,7 +67,7 @@ class Game():
         self.counter = 0
 
         while True:
-
+            pygame.display.set_caption(f"Snake - {int(clock.get_fps())} FPS")
             for event in pygame.event.get():
                 self.events_manager(event)
 
