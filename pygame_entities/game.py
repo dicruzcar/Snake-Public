@@ -34,17 +34,17 @@ class Game():
         self.win = False
         self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 40)
         self.h2_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 20)
-        self.win_text = "¡Felicidades!, ganaste"
+        self.win_text = "¡Congratulations!, you won"
         self.win_surface = self.h1_font.render(
             self.win_text, True, (110, 193, 229)
         )
 
-        self.dead_text = "Has muerto :("
+        self.dead_text = "You died :("
         self.dead_surface = self.h1_font.render(
             self.dead_text, True, (228, 82, 50)
         )
         
-        self.restart_text = f"Presiona [{self.restart_key}] para reiniciar"
+        self.restart_text = f"Press [{self.restart_key}] to restart"
         self.restart_surface = self.h2_font.render(
             self.restart_text, True, (0, 0, 0)
         )
