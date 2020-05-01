@@ -6,7 +6,7 @@ from entities.world import World
 
 class Game():
 
-    def __init__(self, width = 400, height = 400, background = "background.png", snake_value = 1, food_value = 2):
+    def __init__(self, width = 400, height = 400, snake_value = 1, food_value = 2):
         os.environ['SDL_VIDEO_CENTERED'] = "1"
         pygame.init()                           #The main pygame init
         self.screen = pygame.display.set_mode((width, height))
