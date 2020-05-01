@@ -32,7 +32,7 @@ class Game():
         self.ui_frames = 60
         self.frames_per_action_render = int(self.ui_frames/self.game_frames)
         self.win = False
-        self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 40)
+        self.h1_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 35)
         self.h2_font = pygame.font.Font(self.fonts("Blinker-Regular.ttf"), 20)
         self.win_text = "¡Congratulations!, you won"
         self.win_surface = self.h1_font.render(
@@ -101,6 +101,8 @@ class Game():
                 self.alive = True
                 self.win = False
                 self.__init__()
+            if event.key == pygame.K_w:
+                self.world._win_game()
             self.load_world()
             self.counter = 0
     
