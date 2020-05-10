@@ -7,24 +7,26 @@ from entities.world import World
 class Game():
 
     def __init__(self, width = 400, height = 400, snake_value = 1, food_value = 2):
+        
         os.environ['SDL_VIDEO_CENTERED'] = "1"
-        pygame.init()                           #The main pygame init
-        self.screen = pygame.display.set_mode((width, height))
-        pygame.display.set_caption("Snake")
-
+        
         #World attributes
-        self.width = width
-        self.height = height
-        self.background = (236, 240, 241)
         self.basic_pixel_unit = 20
-        self.world_width = width / self.basic_pixel_unit
-        self.world_height = height / self.basic_pixel_unit
+        self.width = int(width - (width % self.basic_pixel_unit))
+        self.height = int(height - (height % self.basic_pixel_unit))
+        self.background = (236, 240, 241)
+        self.world_width = self.width / self.basic_pixel_unit
+        self.world_height = self.height / self.basic_pixel_unit
         self.snake_body_unit_size = self.basic_pixel_unit
         self.snake_body_color = (52, 73, 94)
         self.snake_value = snake_value
         self.food_value = food_value
         self.food_color = (22, 160, 133)
         self.counter = 0
+        
+        self.screen = pygame.display.set_mode((self.width, self.height))
+        pygame.display.set_caption("Snake")
+        pygame.init()                           #The main pygame init
 
         #Game attributes
         self.restart_key = "SPACE"
@@ -100,7 +102,7 @@ class Game():
             if event.key == pygame.K_SPACE:
                 self.alive = True
                 self.win = False
-                self.__init__()
+                self.__init__(self.width, self.height, self.snake_value, self.food_value)
             if event.key == pygame.K_w:
                 self.world._win_game()
             self.load_world()
